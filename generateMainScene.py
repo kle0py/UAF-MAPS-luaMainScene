@@ -2128,6 +2128,49 @@ ${MapName}$_Coach_4.act
     actMapBkg.close()
     print(mapName + "\\MenuArt\\Actors\\" + mapName + "_map_bkg.act", "DONE")
 
+    #MenuArt Textures file
+    ignoreCoach = open(menuartTexturesFolder + mapName + "_Coach.ignore", "w", encoding="utf-8")
+    ignoreCoach.write('''${if eq(NumberCoach, 1):
+${MapName}$_Coach_2.atl
+${MapName}$_Coach_2.tga
+${MapName}$_Coach_2.tga.tfi
+${MapName}$_Coach_2_Phone.png
+${MapName}$_Coach_2_Phone.png.tfi
+${MapName}$_Coach_3.atl
+${MapName}$_Coach_3.tga
+${MapName}$_Coach_3.tga.tfi
+${MapName}$_Coach_3_Phone.png
+${MapName}$_Coach_3_Phone.png.tfi
+${MapName}$_Coach_4.atl
+${MapName}$_Coach_4.tga
+${MapName}$_Coach_4.tga.tfi
+${MapName}$_Coach_4_Phone.png
+${MapName}$_Coach_4_Phone.png.tfi
+}$
+
+${if eq(NumberCoach, 2):
+${MapName}$_Coach_3.atl
+${MapName}$_Coach_3.tga
+${MapName}$_Coach_3.tga.tfi
+${MapName}$_Coach_3_Phone.png
+${MapName}$_Coach_3_Phone.png.tfi
+${MapName}$_Coach_4.atl
+${MapName}$_Coach_4.tga
+${MapName}$_Coach_4.tga.tfi
+${MapName}$_Coach_4_Phone.png
+${MapName}$_Coach_4_Phone.png.tfi
+}$
+
+${if eq(NumberCoach, 3):
+${MapName}$_Coach_4.atl
+${MapName}$_Coach_4.tga
+${MapName}$_Coach_4.tga.tfi
+${MapName}$_Coach_4_Phone.png
+${MapName}$_Coach_4_Phone.png.tfi
+}$''')
+    ignoreCoach.close()
+    print(mapName + "\\MenuArt\\Textures\\" + mapName + "_Coach.ignore", "DONE")
+
     #Timeline files
     btape = open(timelineFolder + mapName + ".btape", "w", encoding="utf-8")
     btape.write(f'''params =
@@ -2291,6 +2334,66 @@ ${MapName}$_Coach_4.act
     print(mapName + "\\Timeline\\" + mapName + "_TML_Karaoke.tpl", "DONE")
 
     #VideosCoach files
+    mpdHD = open(videoscoachFolder + mapName + ".hd.mpd", "w", encoding="utf-8")
+    mpdHD.write(f'''<?xml version="1.0"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" type="static" mediaPresentationDuration="PT181S" minBufferTime="PT1S" profiles="urn:webm:dash:profile:webm-on-demand:2012">
+	<Period id="0" start="PT0S" duration="PT181S">
+		<AdaptationSet id="0" mimeType="video/webm" codecs="vp8" lang="eng" maxWidth="1920" maxHeight="1080" subsegmentAlignment="true" subsegmentStartsWithSAP="1" bitstreamSwitching="true">
+		</AdaptationSet>
+	</Period>
+</MPD>
+''')
+    mpdHD.close()
+    print(mapName + "\\VideosCoach\\" + mapName + ".hd.mpd", "DONE")
+
+    mpd = open(videoscoachFolder + mapName + ".mpd", "w", encoding="utf-8")
+    mpd.write(f'''<?xml version="1.0"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" type="static" mediaPresentationDuration="PT181S" minBufferTime="PT1S" profiles="urn:webm:dash:profile:webm-on-demand:2012">
+	<Period id="0" start="PT0S" duration="PT181S">
+		<AdaptationSet id="0" mimeType="video/webm" codecs="vp8" lang="eng" maxWidth="1216" maxHeight="720" subsegmentAlignment="true" subsegmentStartsWithSAP="1" bitstreamSwitching="true">
+		</AdaptationSet>
+	</Period>
+</MPD>
+''')
+    mpd.close()
+    print(mapName + "\\VideosCoach\\" + mapName + ".mpd", "DONE")
+
+    mpdVP9 = open(videoscoachFolder + mapName + ".vp9.mpd", "w", encoding="utf-8")
+    mpdVP9.write(f'''<?xml version="1.0"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" type="static" mediaPresentationDuration="PT181S" minBufferTime="PT1S" profiles="urn:webm:dash:profile:webm-on-demand:2012">
+	<Period id="0" start="PT0S" duration="PT181S">
+		<AdaptationSet id="0" mimeType="video/webm" codecs="vp9" lang="eng" maxWidth="1280" maxHeight="720" subsegmentAlignment="true" subsegmentStartsWithSAP="1" bitstreamSwitching="true">
+		</AdaptationSet>
+	</Period>
+</MPD>
+''')
+    mpdVP9.close()
+    print(mapName + "\\VideosCoach\\" + mapName + ".vp9.mpd", "DONE")
+
+    mpdMapPreviewNoSoundCropVP8 = open(videoscoachFolder + mapName + "_MapPreviewNoSoundCrop.vp8.mpd", "w", encoding="utf-8")
+    mpdMapPreviewNoSoundCropVP8.write(f'''<?xml version="1.0"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" type="static" mediaPresentationDuration="PT30S" minBufferTime="PT1S" profiles="urn:webm:dash:profile:webm-on-demand:2012">
+	<Period id="0" start="PT0S" duration="PT30S">
+		<AdaptationSet id="0" mimeType="video/webm" codecs="vp8" lang="eng" maxWidth="720" maxHeight="370" subsegmentAlignment="true" subsegmentStartsWithSAP="1" bitstreamSwitching="true">
+		</AdaptationSet>
+	</Period>
+</MPD>
+''')
+    mpdMapPreviewNoSoundCropVP8.close()
+    print(mapName + "\\VideosCoach\\" + mapName + "_MapPreviewNoSoundCrop.vp8.mpd", "DONE")
+
+    mpdMapPreviewNoSoundCropVP9 = open(videoscoachFolder + mapName + "_MapPreviewNoSoundCrop.vp9.mpd", "w", encoding="utf-8")
+    mpdMapPreviewNoSoundCropVP9.write(f'''<?xml version="1.0"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" type="static" mediaPresentationDuration="PT30S" minBufferTime="PT1S" profiles="urn:webm:dash:profile:webm-on-demand:2012">
+	<Period id="0" start="PT0S" duration="PT30S">
+		<AdaptationSet id="0" mimeType="video/webm" codecs="vp9" lang="eng" maxWidth="720" maxHeight="370" subsegmentAlignment="true" subsegmentStartsWithSAP="1" bitstreamSwitching="true">
+		</AdaptationSet>
+	</Period>
+</MPD>
+''')
+    mpdMapPreviewNoSoundCropVP9.close()
+    print(mapName + "\\VideosCoach\\" + mapName + "_MapPreviewNoSoundCrop.vp9.mpd", "DONE")
+
     iscVideo = open(videoscoachFolder + mapName + "_VIDEO.isc", "w", encoding="utf-8")
     iscVideo.write(f'''<?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
