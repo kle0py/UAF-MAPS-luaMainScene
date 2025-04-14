@@ -1,6 +1,6 @@
 # hello :)
 print("A tool made by Kleopy!")
-print("Build: 2\n")
+print("Build: 3\n")
 
 import os, shutil
 
@@ -10,47 +10,47 @@ try:
 except:
     print("Use only numbers!")
     exit()
-output = (os.getcwd() + "\\output\\" + mapName + "\\")
+output = (os.getcwd() + "/output/" + mapName + "/")
 
 try:
     # Create directories
-    audioFolder = (output + "Audio\\")
+    audioFolder = (output + "Audio/")
     os.makedirs(audioFolder, exist_ok=True)
-    autodanceFolder = (output + "Autodance\\")
+    autodanceFolder = (output + "Autodance/")
     os.makedirs(autodanceFolder, exist_ok=True)
-    cinematicsFolder = (output + "Cinematics\\")
+    cinematicsFolder = (output + "Cinematics/")
     os.makedirs( cinematicsFolder, exist_ok=True)
-    graphFolder = (output + "Graph\\")
+    graphFolder = (output + "Graph/")
     os.makedirs(graphFolder, exist_ok=True)
-    menuartFolder = (output + "MenuArt\\")
+    menuartFolder = (output + "MenuArt/")
     os.makedirs(menuartFolder, exist_ok=True)
-    menuartActorsFolder = (output + "MenuArt\\Actors\\")
+    menuartActorsFolder = (output + "MenuArt/Actors/")
     os.makedirs(menuartActorsFolder, exist_ok=True)
-    menuartTexturesFolder = (output + "MenuArt\\Textures\\")
+    menuartTexturesFolder = (output + "MenuArt/Textures/")
     os.makedirs(menuartTexturesFolder, exist_ok=True)
-    timelineFolder = (output + "Timeline\\")
+    timelineFolder = (output + "Timeline/")
     os.makedirs(timelineFolder, exist_ok=True)
-    timelineMovesFolder = (output + "Timeline\\Moves\\")
+    timelineMovesFolder = (output + "Timeline/Moves/")
     os.makedirs(timelineMovesFolder, exist_ok=True)
-    durangoMovesFolder = (timelineMovesFolder + "DURANGO\\")
+    durangoMovesFolder = (timelineMovesFolder + "DURANGO/")
     os.makedirs(durangoMovesFolder, exist_ok=True)
-    orbisMovesFolder = (timelineMovesFolder + "ORBIS\\")
+    orbisMovesFolder = (timelineMovesFolder + "ORBIS/")
     os.makedirs(orbisMovesFolder, exist_ok=True)
-    ps3MovesFolder = (timelineMovesFolder + "PS3\\")
+    ps3MovesFolder = (timelineMovesFolder + "PS3/")
     os.makedirs(ps3MovesFolder, exist_ok=True)
-    wiiMovesFolder = (timelineMovesFolder + "WII\\")
+    wiiMovesFolder = (timelineMovesFolder + "WII/")
     os.makedirs(wiiMovesFolder, exist_ok=True)
-    wiiuMovesFolder = (timelineMovesFolder + "WIIU\\")
+    wiiuMovesFolder = (timelineMovesFolder + "WIIU/")
     os.makedirs(wiiuMovesFolder, exist_ok=True)
-    x360MovesFolder = (timelineMovesFolder + "X360\\")
+    x360MovesFolder = (timelineMovesFolder + "X360/")
     os.makedirs(x360MovesFolder, exist_ok=True)
-    timelinePictosFolder = (output + "Timeline\\Pictos\\")
+    timelinePictosFolder = (output + "Timeline/Pictos/")
     os.makedirs(timelinePictosFolder, exist_ok=True)
-    timelineRecordingFolder = (output + "Timeline\\Recording\\")
+    timelineRecordingFolder = (output + "Timeline/Recording/")
     os.makedirs(timelineRecordingFolder, exist_ok=True)
-    timelineSnippingFolder = (output + "Timeline\\Snipping\\")
+    timelineSnippingFolder = (output + "Timeline/Snipping/")
     os.makedirs(timelineSnippingFolder, exist_ok=True)
-    videoscoachFolder = (output + "VideosCoach\\")
+    videoscoachFolder = (output + "VideosCoach/")
     os.makedirs(videoscoachFolder, exist_ok=True)
     print("\nCreating all directories..", "DONE")
 
@@ -120,7 +120,7 @@ try:
 </root>
 ''')
     iscMainScene.close()
-    print(mapName + "\\" + mapName + "_MAIN_SCENE.isc", "DONE")
+    print(mapName + "/" + mapName + "_MAIN_SCENE.isc", "DONE")
 
     actSongDesc = open(output + "SongDesc.act", "w", encoding="utf-8")
     actSongDesc.write(f'''params =
@@ -142,7 +142,7 @@ try:
 }}
 ''')
     actSongDesc.close()
-    print(mapName + "\\" + "SongDesc.act", "DONE")
+    print(mapName + "/" + "SongDesc.act", "DONE")
 
     # Audio files
     sfiConfigMusic = open(audioFolder + "ConfigMusic.sfi", "w", encoding="utf-8")
@@ -160,7 +160,7 @@ try:
   <SoundConfiguration TargetName="SCARLETT" Format="PCM" IsStreamed="1" IsMusic="1"/>
 </root>''')
     sfiConfigMusic.close()
-    print(mapName + "\\Audio\\" + "ConfigMusic.sfi", "DONE")
+    print(mapName + "/Audio/" + "ConfigMusic.sfi", "DONE")
 
     stape = open(audioFolder + mapName + ".stape", "w", encoding="utf-8")
     stape.write(f'''params =
@@ -177,7 +177,7 @@ try:
 }}
 ''')
     stape.close()
-    print(mapName + "\\Audio\\" + mapName + ".stape", "DONE")
+    print(mapName + "/Audio/" + mapName + ".stape", "DONE")
 
     iscAudio = open(audioFolder + mapName + "_AUDIO.isc", "w", encoding="utf-8")
     iscAudio.write(f'''<?xml version="1.0" encoding="ISO-8859-1"?>
@@ -204,7 +204,7 @@ try:
 </root>
 ''')
     iscAudio.close()
-    print(mapName + "\\Audio\\" + mapName + "_AUDIO.isc", "DONE")
+    print(mapName + "/Audio/" + mapName + "_AUDIO.isc", "DONE")
 
     tplMusicTrack = open(audioFolder + mapName + "_MusicTrack.tpl", "w", encoding="utf-8")
     tplMusicTrack.write(f'''includeReference("World/MAPS/{mapName}/audio/{mapName}.trk")
@@ -234,7 +234,7 @@ params =
 }}
 ''')
     tplMusicTrack.close()
-    print(mapName + "\\Audio\\" + mapName + "_MusicTrack.tpl", "DONE")
+    print(mapName + "/Audio/" + mapName + "_MusicTrack.tpl", "DONE")
 
     tplSequence = open(audioFolder + mapName + "_Sequence.tpl", "w", encoding="utf-8")
     tplSequence.write(f'''params =
@@ -273,13 +273,13 @@ params =
 }}
 ''')
     tplSequence.close()
-    print(mapName + "\\Audio\\" + mapName + "_Sequence.tpl", "DONE")
+    print(mapName + "/Audio/" + mapName + "_Sequence.tpl", "DONE")
 
     # Autodance files
     adrecording = open(autodanceFolder + mapName + ".adrecording", "w", encoding="utf-8")
     adrecording.write(f'''autodance_recording_structure = {{ }}''')
     adrecording.close()
-    print(mapName + "\\Autodance\\" + mapName + ".adrecording", "DONE")
+    print(mapName + "/Autodance/" + mapName + ".adrecording", "DONE")
 
     adtape = open(autodanceFolder + mapName + ".adtape", "w", encoding="utf-8")
     adtape.write(f'''params =
@@ -290,21 +290,21 @@ params =
         TapeClock = 2, -- TapeClock_Engine
         TapeBarCount = 1,
         FreeResourcesAfterPlay = 0,
-        MapName = "NeverGonna",
+        MapName = "{mapName}",
         SoundwichEvent = "",
     }},
 }}
 ''')
     adtape.close()
-    print(mapName + "\\Autodance\\" + mapName + ".adtape", "DONE")
+    print(mapName + "/Autodance/" + mapName + ".adtape", "DONE")
 
     advideo = open(autodanceFolder + mapName + ".advideo", "w", encoding="utf-8")
     advideo.write(f'''autodance_video_structure = {{ }}''')
     advideo.close()
-    print(mapName + "\\Autodance\\" + mapName + ".advideo", "DONE")
+    print(mapName + "/Autodance/" + mapName + ".advideo", "DONE")
 
     shutil.copyfile("assets/defaultAutodance.ogg", autodanceFolder + mapName + ".ogg")
-    print(mapName + "\\Autodance\\" + mapName + ".ogg", "DONE")
+    print(mapName + "/Autodance/" + mapName + ".ogg", "DONE")
 
     actAutodance = open(autodanceFolder + mapName + "_Autodance.act", "w", encoding="utf-8")
     actAutodance.write(f'''params =
@@ -316,7 +316,7 @@ params =
 	}}
 }}''')
     actAutodance.close()
-    print(mapName + "\\Autodance\\" + mapName + "_Autodance.act", "DONE")
+    print(mapName + "/Autodance/" + mapName + "_Autodance.act", "DONE")
 
     iscAutodance = open(autodanceFolder + mapName + "_AUTODANCE.isc", "w", encoding="utf-8")
     iscAutodance.write(f'''<?xml version="1.0" encoding="ISO-8859-1"?>
@@ -336,7 +336,7 @@ params =
 </root>
 ''')
     iscAutodance.close()
-    print(mapName + "\\Autodance\\" + mapName + "_AUTODANCE.isc", "DONE")
+    print(mapName + "/Autodance/" + mapName + "_AUTODANCE.isc", "DONE")
 
     tplAutodance = open(autodanceFolder + mapName + "_Autodance.tpl", "w", encoding="utf-8")
     tplAutodance.write(f'''includeReference("World/MAPS/{mapName}/autodance/{mapName}.adrecording")
@@ -370,7 +370,7 @@ params =
 }}
 ''')
     tplAutodance.close()
-    print(mapName + "\\Autodance\\" + mapName + "_Autodance.tpl", "DONE")
+    print(mapName + "/Autodance/" + mapName + "_Autodance.tpl", "DONE")
 
     # Cinematics files
     iscCine = open(cinematicsFolder + mapName + "_CINE.isc", "w", encoding="utf-8")
@@ -391,7 +391,7 @@ params =
 </root>
 ''')
     iscCine.close()
-    print(mapName + "\\Cinematics\\" + mapName + "_CINE.isc", "DONE")
+    print(mapName + "/Cinematics/" + mapName + "_CINE.isc", "DONE")
 
     actMainSequence = open(cinematicsFolder + mapName + "_MainSequence.act", "w", encoding="utf-8")
     actMainSequence.write(f'''params = 
@@ -410,7 +410,7 @@ params =
     }}
 }}''')
     actMainSequence.close()
-    print(mapName + "\\Cinematics\\" + mapName + "_MainSequence.act", "DONE")
+    print(mapName + "/Cinematics/" + mapName + "_MainSequence.act", "DONE")
 
     tplMainSequence = open(cinematicsFolder + mapName + "_MainSequence.tpl", "w", encoding="utf-8")
     tplMainSequence.write(f'''params = 
@@ -432,7 +432,7 @@ params =
     }}
 }}''')
     tplMainSequence.close()
-    print(mapName + "\\Cinematics\\" + mapName + "_MainSequence.tpl", "DONE")
+    print(mapName + "/Cinematics/" + mapName + "_MainSequence.tpl", "DONE")
 
     # Graph file (only the default one)
     iscGraph = open(graphFolder + mapName + "_GRAPH.isc", "w", encoding="utf-8")
@@ -449,7 +449,7 @@ params =
 </root>
 ''')
     iscGraph.close()
-    print(mapName + "\\Graph\\" + mapName + "_GRAPH.isc", "DONE")
+    print(mapName + "/Graph/" + mapName + "_GRAPH.isc", "DONE")
 
     #MenuArt files
     iscColorHelper = open(menuartFolder + mapName + "_colorhelper.isc", "w", encoding="utf-8")
@@ -536,7 +536,7 @@ params =
 </root>
 ''')
     iscColorHelper.close()
-    print(mapName + "\\MenuArt\\" + mapName + "_colorhelper.isc", "DONE")
+    print(mapName + "/MenuArt/" + mapName + "_colorhelper.isc", "DONE")
 
     iscMenuArt = open(menuartFolder + mapName + "_MENUART.isc", "w", encoding="utf-8")
     iscMenuArtContent = ""
@@ -1676,7 +1676,7 @@ params =
 ''')
     iscMenuArt.write(iscMenuArtContent)
     iscMenuArt.close()
-    print(mapName + "\\MenuArt\\" + mapName + "_MENUART.isc", "DONE")
+    print(mapName + "/MenuArt/" + mapName + "_MENUART.isc", "DONE")
 
     #MenuArt Actors files
     actBannerBkg = open(menuartActorsFolder + mapName + "_banner_bkg.act", "w", encoding="utf-8")
@@ -1716,7 +1716,7 @@ params =
 }}
 ''')
     actBannerBkg.close()
-    print(mapName + "\\MenuArt\\Actors\\" + mapName + "_banner_bkg.act", "DONE")
+    print(mapName + "/MenuArt/Actors/" + mapName + "_banner_bkg.act", "DONE")
 
     ignoreCoach = open(menuartActorsFolder + mapName + "_Coach.ignore", "w", encoding="utf-8")
     ignoreCoach.write('''${if eq(NumberCoach, 1):
@@ -1735,7 +1735,7 @@ ${MapName}$_Coach_4.act
 }$
 ''')
     ignoreCoach.close()
-    print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Coach.ignore", "DONE")
+    print(mapName + "/MenuArt/Actors/" + mapName + "_Coach.ignore", "DONE")
 
     actCoach1 = open(menuartActorsFolder + mapName + "_Coach_1.act", "w", encoding="utf-8")
     actCoach1.write(f'''params =
@@ -1774,7 +1774,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
     actCoach1.close()
-    print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Coach_1.act", "DONE")
+    print(mapName + "/MenuArt/Actors/" + mapName + "_Coach_1.act", "DONE")
 
     if coachNumber > 1:
         actCoach2 = open(menuartActorsFolder + mapName + "_Coach_2.act", "w", encoding="utf-8")
@@ -1814,7 +1814,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
         actCoach2.close()
-        print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Coach_2.act", "DONE")
+        print(mapName + "/MenuArt/Actors/" + mapName + "_Coach_2.act", "DONE")
 
     if coachNumber > 2:
         actCoach3 = open(menuartActorsFolder + mapName + "_Coach_3.act", "w", encoding="utf-8")
@@ -1854,7 +1854,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
         actCoach3.close()
-        print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Coach_3.act", "DONE")
+        print(mapName + "/MenuArt/Actors/" + mapName + "_Coach_3.act", "DONE")
 
     if coachNumber > 3:
         actCoach4 = open(menuartActorsFolder + mapName + "_Coach_4.act", "w", encoding="utf-8")
@@ -1894,7 +1894,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
         actCoach4.close()
-        print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Coach_4.act", "DONE")
+        print(mapName + "/MenuArt/Actors/" + mapName + "_Coach_4.act", "DONE")
 
     actCoverAlbumBkg = open(menuartActorsFolder + mapName + "_Cover_AlbumBkg.act", "w", encoding="utf-8")
     actCoverAlbumBkg.write(f'''params =
@@ -1933,7 +1933,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
     actCoverAlbumBkg.close()
-    print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Cover_AlbumBkg.act", "DONE")
+    print(mapName + "/MenuArt/Actors/" + mapName + "_Cover_AlbumBkg.act", "DONE")
 
     actCoverAlbumCoach = open(menuartActorsFolder + mapName + "_Cover_AlbumCoach.act", "w", encoding="utf-8")
     actCoverAlbumCoach.write(f'''params =
@@ -1972,7 +1972,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
     actCoverAlbumCoach.close()
-    print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Cover_AlbumCoach.act", "DONE")
+    print(mapName + "/MenuArt/Actors/" + mapName + "_Cover_AlbumCoach.act", "DONE")
 
     actCoverGeneric = open(menuartActorsFolder + mapName + "_Cover_Generic.act", "w", encoding="utf-8")
     actCoverGeneric.write(f'''params =
@@ -2011,7 +2011,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
     actCoverGeneric.close()
-    print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Cover_Generic.act", "DONE")
+    print(mapName + "/MenuArt/Actors/" + mapName + "_Cover_Generic.act", "DONE")
 
     actCoverOnline = open(menuartActorsFolder + mapName + "_Cover_Online.act", "w", encoding="utf-8")
     actCoverOnline.write(f'''params =
@@ -2049,7 +2049,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
     actCoverOnline.close()
-    print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Cover_Online.act", "DONE")
+    print(mapName + "/MenuArt/Actors/" + mapName + "_Cover_Online.act", "DONE")
 
     actCoverOnlineKids = open(menuartActorsFolder + mapName + "_Cover_Online_Kids.act", "w", encoding="utf-8")
     actCoverOnlineKids.write(f'''params =
@@ -2087,7 +2087,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
     actCoverOnlineKids.close()
-    print(mapName + "\\MenuArt\\Actors\\" + mapName + "_Cover_Online_Kids.act", "DONE")
+    print(mapName + "/MenuArt/Actors/" + mapName + "_Cover_Online_Kids.act", "DONE")
 
     actMapBkg = open(menuartActorsFolder + mapName + "_map_bkg.act", "w", encoding="utf-8")
     actMapBkg.write(f'''params =
@@ -2126,7 +2126,7 @@ ${MapName}$_Coach_4.act
 }}
 ''')
     actMapBkg.close()
-    print(mapName + "\\MenuArt\\Actors\\" + mapName + "_map_bkg.act", "DONE")
+    print(mapName + "/MenuArt/Actors/" + mapName + "_map_bkg.act", "DONE")
 
     #MenuArt Textures file
     ignoreCoach = open(menuartTexturesFolder + mapName + "_Coach.ignore", "w", encoding="utf-8")
@@ -2169,7 +2169,7 @@ ${MapName}$_Coach_4_Phone.png
 ${MapName}$_Coach_4_Phone.png.tfi
 }$''')
     ignoreCoach.close()
-    print(mapName + "\\MenuArt\\Textures\\" + mapName + "_Coach.ignore", "DONE")
+    print(mapName + "/MenuArt/Textures/" + mapName + "_Coach.ignore", "DONE")
 
     #Timeline files
     btape = open(timelineFolder + mapName + ".btape", "w", encoding="utf-8")
@@ -2187,7 +2187,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 }}
 ''')
     btape.close()
-    print(mapName + "\\Timeline\\" + mapName + ".btape", "DONE")
+    print(mapName + "/Timeline/" + mapName + ".btape", "DONE")
 
     iscTml = open(timelineFolder + mapName + "_TML.isc", "w", encoding="utf-8")
     iscTml.write(f'''<?xml version="1.0" encoding="iso-8859-1"?>
@@ -2213,7 +2213,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 	</Scene>
 </root>''')
     iscTml.close()
-    print(mapName + "\\Timeline\\" + mapName + "_TML.isc", "DONE")
+    print(mapName + "/Timeline/" + mapName + "_TML.isc", "DONE")
 
     actTmlDance = open(timelineFolder + mapName + "_TML_Dance.act", "w", encoding="utf-8")
     actTmlDance.write(f'''params = 
@@ -2232,7 +2232,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 }}
 ''')
     actTmlDance.close()
-    print(mapName + "\\Timeline\\" + mapName + "_TML_Dance.act", "DONE")
+    print(mapName + "/Timeline/" + mapName + "_TML_Dance.act", "DONE")
 
     tplTmlDance = open(timelineFolder + mapName + "_TML_Dance.tpl", "w", encoding="utf-8")
     tplTmlDance.write(f'''params = 
@@ -2272,7 +2272,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 }}
 ''')
     tplTmlDance.close()
-    print(mapName + "\\Timeline\\" + mapName + "_TML_Dance.tpl", "DONE")
+    print(mapName + "/Timeline/" + mapName + "_TML_Dance.tpl", "DONE")
 
     actTmlKaraoke = open(timelineFolder + mapName + "_TML_Karaoke.act", "w", encoding="utf-8")
     actTmlKaraoke.write(f'''params = 
@@ -2291,7 +2291,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 }}
 ''')
     actTmlKaraoke.close()
-    print(mapName + "\\Timeline\\" + mapName + "_TML_Karaoke.act", "DONE")
+    print(mapName + "/Timeline/" + mapName + "_TML_Karaoke.act", "DONE")
 
     tplTmlKaraoke = open(timelineFolder + mapName + "_TML_Karaoke.tpl", "w", encoding="utf-8")
     tplTmlKaraoke.write(f'''params = 
@@ -2331,7 +2331,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 }}
 ''')
     tplTmlKaraoke.close()
-    print(mapName + "\\Timeline\\" + mapName + "_TML_Karaoke.tpl", "DONE")
+    print(mapName + "/Timeline/" + mapName + "_TML_Karaoke.tpl", "DONE")
 
     #VideosCoach files
     mpdHD = open(videoscoachFolder + mapName + ".hd.mpd", "w", encoding="utf-8")
@@ -2344,7 +2344,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 </MPD>
 ''')
     mpdHD.close()
-    print(mapName + "\\VideosCoach\\" + mapName + ".hd.mpd", "DONE")
+    print(mapName + "/VideosCoach/" + mapName + ".hd.mpd", "DONE")
 
     mpd = open(videoscoachFolder + mapName + ".mpd", "w", encoding="utf-8")
     mpd.write(f'''<?xml version="1.0"?>
@@ -2356,7 +2356,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 </MPD>
 ''')
     mpd.close()
-    print(mapName + "\\VideosCoach\\" + mapName + ".mpd", "DONE")
+    print(mapName + "/VideosCoach/" + mapName + ".mpd", "DONE")
 
     mpdVP9 = open(videoscoachFolder + mapName + ".vp9.mpd", "w", encoding="utf-8")
     mpdVP9.write(f'''<?xml version="1.0"?>
@@ -2368,7 +2368,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 </MPD>
 ''')
     mpdVP9.close()
-    print(mapName + "\\VideosCoach\\" + mapName + ".vp9.mpd", "DONE")
+    print(mapName + "/VideosCoach/" + mapName + ".vp9.mpd", "DONE")
 
     mpdMapPreviewNoSoundCropVP8 = open(videoscoachFolder + mapName + "_MapPreviewNoSoundCrop.vp8.mpd", "w", encoding="utf-8")
     mpdMapPreviewNoSoundCropVP8.write(f'''<?xml version="1.0"?>
@@ -2380,7 +2380,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 </MPD>
 ''')
     mpdMapPreviewNoSoundCropVP8.close()
-    print(mapName + "\\VideosCoach\\" + mapName + "_MapPreviewNoSoundCrop.vp8.mpd", "DONE")
+    print(mapName + "/VideosCoach/" + mapName + "_MapPreviewNoSoundCrop.vp8.mpd", "DONE")
 
     mpdMapPreviewNoSoundCropVP9 = open(videoscoachFolder + mapName + "_MapPreviewNoSoundCrop.vp9.mpd", "w", encoding="utf-8")
     mpdMapPreviewNoSoundCropVP9.write(f'''<?xml version="1.0"?>
@@ -2392,7 +2392,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 </MPD>
 ''')
     mpdMapPreviewNoSoundCropVP9.close()
-    print(mapName + "\\VideosCoach\\" + mapName + "_MapPreviewNoSoundCrop.vp9.mpd", "DONE")
+    print(mapName + "/VideosCoach/" + mapName + "_MapPreviewNoSoundCrop.vp9.mpd", "DONE")
 
     iscVideo = open(videoscoachFolder + mapName + "_VIDEO.isc", "w", encoding="utf-8")
     iscVideo.write(f'''<?xml version="1.0" encoding="ISO-8859-1"?>
@@ -2434,7 +2434,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 </root>
 ''')
     iscVideo.close()
-    print(mapName + "\\VideosCoach\\" + mapName + "_VIDEO.isc", "DONE")
+    print(mapName + "/VideosCoach/" + mapName + "_VIDEO.isc", "DONE")
 
     iscVideoMapPreview = open(videoscoachFolder + mapName + "_VIDEO_MAP_PREVIEW.isc", "w", encoding="utf-8")
     iscVideoMapPreview.write(f'''<?xml version="1.0" encoding="ISO-8859-1"?>
@@ -2451,7 +2451,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 </root>
 ''')
     iscVideoMapPreview.close()
-    print(mapName + "\\VideosCoach\\" + mapName + "_VIDEO_MAP_PREVIEW.isc", "DONE")
+    print(mapName + "/VideosCoach/" + mapName + "_VIDEO_MAP_PREVIEW.isc", "DONE")
 
     actVideoPlayerMain = open(videoscoachFolder + "video_player_main.act", "w", encoding="utf-8")
     actVideoPlayerMain.write(f'''params =
@@ -2475,7 +2475,7 @@ ${MapName}$_Coach_4_Phone.png.tfi
 }}
 ''')
     actVideoPlayerMain.close()
-    print(mapName + "\\VideosCoach\\" + "video_player_main.act", "DONE")
+    print(mapName + "/VideosCoach/" + "video_player_main.act", "DONE")
 
     actVideoPlayerMapPreview = open(videoscoachFolder + "video_player_map_preview.act", "w", encoding="utf-8")
     actVideoPlayerMapPreview.write(f'''params =
@@ -2500,6 +2500,6 @@ ${MapName}$_Coach_4_Phone.png.tfi
 }}
 ''')
     actVideoPlayerMapPreview.close()
-    print(mapName + "\\VideosCoach\\" + "video_player_map_preview.act", "DONE")
+    print(mapName + "/VideosCoach/" + "video_player_map_preview.act", "DONE")
 except:
     print("\nThere's an error somewhere!")
