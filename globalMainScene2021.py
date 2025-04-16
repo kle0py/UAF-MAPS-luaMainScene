@@ -1,5 +1,5 @@
 # hello :)
-print("Welcome to the UbiArt Framework \033[34mlua MainScene\033[0m \033[1mmaker\033[0m!")
+print("Welcome to the UbiArt Framework \033[34mlua MainScene\033[0m \033[1mmaker\033[0m! for MAPS")
 print("(It was made specifically for the \033[1mJD2021_TU1\033[0m build that has been publicly shared)")
 print("This is a tool made by \033[4mKleopy\033[0m")
 print("Code version: 4\n")
