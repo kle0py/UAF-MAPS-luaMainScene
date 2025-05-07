@@ -1,8 +1,8 @@
 # hello :)
-print("Welcome to the UbiArt Framework \033[34mlua MainScene\033[0m \033[1mmaker\033[0m! for MAPS")
+print("Welcome to the UbiArt Framework \033[34mlua MainScene\033[0m \033[1mmaker\033[0m!")
 print("(It was made specifically for the \033[1mJD2021_TU1\033[0m build that has been publicly shared)")
 print("This is a tool made by \033[4mKleopy\033[0m")
-print("Code version: 4\n")
+print("Code version: 5\n")
 
 import os, shutil
 
@@ -19,6 +19,7 @@ output = (os.getcwd() + "/output/" + mapName + "/")
 
 try:
     print("\nLog:")
+    rawDataDir = "_RawData/"
     # Create directories
     audioFolder = (output + "Audio/")
     os.makedirs(audioFolder, exist_ok=True)
@@ -30,6 +31,8 @@ try:
     os.makedirs(graphFolder, exist_ok=True)
     menuartFolder = (output + "MenuArt/")
     os.makedirs(menuartFolder, exist_ok=True)
+    rawDataMenuArt = (menuartFolder + rawDataDir)
+    os.makedirs(rawDataMenuArt, exist_ok=True)
     menuartActorsFolder = (output + "MenuArt/Actors/")
     os.makedirs(menuartActorsFolder, exist_ok=True)
     menuartTexturesFolder = (output + "MenuArt/Textures/")
@@ -52,6 +55,8 @@ try:
     os.makedirs(x360MovesFolder, exist_ok=True)
     timelinePictosFolder = (output + "Timeline/Pictos/")
     os.makedirs(timelinePictosFolder, exist_ok=True)
+    rawDataPictos = (timelinePictosFolder + rawDataDir)
+    os.makedirs(rawDataPictos, exist_ok=True)
     timelineRecordingFolder = (output + "Timeline/Recording/")
     os.makedirs(timelineRecordingFolder, exist_ok=True)
     timelineSnippingFolder = (output + "Timeline/Snipping/")
@@ -626,6 +631,31 @@ params =
 			</Actor>
 		</ACTORS>
 		<ACTORS NAME="Actor">
+			<Actor RELATIVEZ="0.000000" SCALE="0.300000 0.300000" xFLIPPED="0" USERFRIENDLY="{mapName}_cover_generic_kids" POS2D="266.087555 197.629959" ANGLE="0.000000" INSTANCEDATAFILE="World/MAPS/{mapName}/menuart/actors/{mapName}_cover_generic_kids.act" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+				<COMPONENTS NAME="MaterialGraphicComponent">
+					<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="-1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
+						<PrimitiveParameters>
+							<GFXPrimitiveParam colorFactor="1.000000 1.000000 1.000000 1.000000" FrontLightBrightness="0.000000" FrontLightContrast="1.000000" BackLightBrightness="0.000000" BackLightContrast="1.000000" colorFog="0.000000 0.000000 0.000000 0.000000" DynamicFogFactor="1.000000" useStaticFog="0" RenderInReflections="1">
+								<ENUM NAME="gfxOccludeInfo" SEL="0"/>
+							</GFXPrimitiveParam>
+						</PrimitiveParameters>
+						<ENUM NAME="anchor" SEL="1"/>
+						<material>
+							<GFXMaterialSerializable ATL_Channel="0" shaderPath="World/_COMMON/MatShader/MultiTexture_1Layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
+								<textureSet>
+									<GFXMaterialTexturePathSet diffuse="World/MAPS/{mapName}/menuart/textures/{mapName}_cover_generic_kids.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4=""/>
+								</textureSet>
+								<materialParams>
+									<GFXMaterialSerializableParam Reflector_factor="0.000000"/>
+								</materialParams>
+							</GFXMaterialSerializable>
+						</material>
+						<ENUM NAME="oldAnchor" SEL="1"/>
+					</MaterialGraphicComponent>
+				</COMPONENTS>
+			</Actor>
+		</ACTORS>
+		<ACTORS NAME="Actor">
 			<Actor RELATIVEZ="0.000000" SCALE="0.300000 0.300000" xFLIPPED="0" USERFRIENDLY="{mapName}_cover_online_Kids" POS2D="-150.00000 0.00000" ANGLE="0.000000" INSTANCEDATAFILE="World/MAPS/{mapName}/menuart/actors/{mapName}_cover_online_Kids.act" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
 				<COMPONENTS NAME="MaterialGraphicComponent">
 					<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="-1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
@@ -860,6 +890,31 @@ params =
 							<GFXMaterialSerializable ATL_Channel="0" shaderPath="World/_COMMON/MatShader/MultiTexture_1Layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 								<textureSet>
 									<GFXMaterialTexturePathSet diffuse="World/MAPS/{mapName}/menuart/textures/{mapName}_cover_generic.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4=""/>
+								</textureSet>
+								<materialParams>
+									<GFXMaterialSerializableParam Reflector_factor="0.000000"/>
+								</materialParams>
+							</GFXMaterialSerializable>
+						</material>
+						<ENUM NAME="oldAnchor" SEL="1"/>
+					</MaterialGraphicComponent>
+				</COMPONENTS>
+			</Actor>
+		</ACTORS>
+		<ACTORS NAME="Actor">
+			<Actor RELATIVEZ="0.000000" SCALE="0.300000 0.300000" xFLIPPED="0" USERFRIENDLY="{mapName}_cover_generic_kids" POS2D="266.087555 197.629959" ANGLE="0.000000" INSTANCEDATAFILE="World/MAPS/{mapName}/menuart/actors/{mapName}_cover_generic_kids.act" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+				<COMPONENTS NAME="MaterialGraphicComponent">
+					<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="-1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
+						<PrimitiveParameters>
+							<GFXPrimitiveParam colorFactor="1.000000 1.000000 1.000000 1.000000" FrontLightBrightness="0.000000" FrontLightContrast="1.000000" BackLightBrightness="0.000000" BackLightContrast="1.000000" colorFog="0.000000 0.000000 0.000000 0.000000" DynamicFogFactor="1.000000" useStaticFog="0" RenderInReflections="1">
+								<ENUM NAME="gfxOccludeInfo" SEL="0"/>
+							</GFXPrimitiveParam>
+						</PrimitiveParameters>
+						<ENUM NAME="anchor" SEL="1"/>
+						<material>
+							<GFXMaterialSerializable ATL_Channel="0" shaderPath="World/_COMMON/MatShader/MultiTexture_1Layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
+								<textureSet>
+									<GFXMaterialTexturePathSet diffuse="World/MAPS/{mapName}/menuart/textures/{mapName}_cover_generic_kids.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4=""/>
 								</textureSet>
 								<materialParams>
 									<GFXMaterialSerializableParam Reflector_factor="0.000000"/>
@@ -1131,6 +1186,31 @@ params =
 							<GFXMaterialSerializable ATL_Channel="0" shaderPath="World/_COMMON/MatShader/MultiTexture_1Layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 								<textureSet>
 									<GFXMaterialTexturePathSet diffuse="World/MAPS/{mapName}/menuart/textures/{mapName}_cover_generic.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4=""/>
+								</textureSet>
+								<materialParams>
+									<GFXMaterialSerializableParam Reflector_factor="0.000000"/>
+								</materialParams>
+							</GFXMaterialSerializable>
+						</material>
+						<ENUM NAME="oldAnchor" SEL="1"/>
+					</MaterialGraphicComponent>
+				</COMPONENTS>
+			</Actor>
+		</ACTORS>
+		<ACTORS NAME="Actor">
+			<Actor RELATIVEZ="0.000000" SCALE="0.300000 0.300000" xFLIPPED="0" USERFRIENDLY="{mapName}_cover_generic_kids" POS2D="266.087555 197.629959" ANGLE="0.000000" INSTANCEDATAFILE="World/MAPS/{mapName}/menuart/actors/{mapName}_cover_generic_kids.act" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+				<COMPONENTS NAME="MaterialGraphicComponent">
+					<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="-1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
+						<PrimitiveParameters>
+							<GFXPrimitiveParam colorFactor="1.000000 1.000000 1.000000 1.000000" FrontLightBrightness="0.000000" FrontLightContrast="1.000000" BackLightBrightness="0.000000" BackLightContrast="1.000000" colorFog="0.000000 0.000000 0.000000 0.000000" DynamicFogFactor="1.000000" useStaticFog="0" RenderInReflections="1">
+								<ENUM NAME="gfxOccludeInfo" SEL="0"/>
+							</GFXPrimitiveParam>
+						</PrimitiveParameters>
+						<ENUM NAME="anchor" SEL="1"/>
+						<material>
+							<GFXMaterialSerializable ATL_Channel="0" shaderPath="World/_COMMON/MatShader/MultiTexture_1Layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
+								<textureSet>
+									<GFXMaterialTexturePathSet diffuse="World/MAPS/{mapName}/menuart/textures/{mapName}_cover_generic_kids.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4=""/>
 								</textureSet>
 								<materialParams>
 									<GFXMaterialSerializableParam Reflector_factor="0.000000"/>
@@ -1427,6 +1507,31 @@ params =
 							<GFXMaterialSerializable ATL_Channel="0" shaderPath="World/_COMMON/MatShader/MultiTexture_1Layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 								<textureSet>
 									<GFXMaterialTexturePathSet diffuse="World/MAPS/{mapName}/menuart/textures/{mapName}_cover_generic.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4=""/>
+								</textureSet>
+								<materialParams>
+									<GFXMaterialSerializableParam Reflector_factor="0.000000"/>
+								</materialParams>
+							</GFXMaterialSerializable>
+						</material>
+						<ENUM NAME="oldAnchor" SEL="1"/>
+					</MaterialGraphicComponent>
+				</COMPONENTS>
+			</Actor>
+		</ACTORS>
+		<ACTORS NAME="Actor">
+			<Actor RELATIVEZ="0.000000" SCALE="0.300000 0.300000" xFLIPPED="0" USERFRIENDLY="{mapName}_cover_generic_kids" POS2D="266.087555 197.629959" ANGLE="0.000000" INSTANCEDATAFILE="World/MAPS/{mapName}/menuart/actors/{mapName}_cover_generic_kids.act" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+				<COMPONENTS NAME="MaterialGraphicComponent">
+					<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="-1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
+						<PrimitiveParameters>
+							<GFXPrimitiveParam colorFactor="1.000000 1.000000 1.000000 1.000000" FrontLightBrightness="0.000000" FrontLightContrast="1.000000" BackLightBrightness="0.000000" BackLightContrast="1.000000" colorFog="0.000000 0.000000 0.000000 0.000000" DynamicFogFactor="1.000000" useStaticFog="0" RenderInReflections="1">
+								<ENUM NAME="gfxOccludeInfo" SEL="0"/>
+							</GFXPrimitiveParam>
+						</PrimitiveParameters>
+						<ENUM NAME="anchor" SEL="1"/>
+						<material>
+							<GFXMaterialSerializable ATL_Channel="0" shaderPath="World/_COMMON/MatShader/MultiTexture_1Layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
+								<textureSet>
+									<GFXMaterialTexturePathSet diffuse="World/MAPS/{mapName}/menuart/textures/{mapName}_cover_generic_kids.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4=""/>
 								</textureSet>
 								<materialParams>
 									<GFXMaterialSerializableParam Reflector_factor="0.000000"/>
@@ -2035,6 +2140,45 @@ ${MapName}$_Coach_4.act
     actCoverGeneric.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Actors/" + mapName + "_Cover_Generic.act")
 
+    actCoverGenericKids = open(menuartActorsFolder + mapName + "_Cover_Generic_Kids.act", "w", encoding="utf-8")
+    actCoverGenericKids.write(f'''params =
+{{
+    NAME="Actor",
+    Actor =
+    {{
+        RELATIVEZ = 0,00000,
+        LUA = "enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl",
+        COMPONENTS =
+        {{
+            {{
+                NAME = "MaterialGraphicComponent",
+                MaterialGraphicComponent =
+                {{
+                    disableLight = 0,
+                    material =
+                    {{
+                        GFXMaterialSerializable =
+                        {{
+                            textureSet =
+                            {{
+                                GFXMaterialTexturePathSet =
+                                {{
+                                    diffuse = "World/MAPS/{mapName}/menuart/textures/{mapName}_cover_generic_kids.tga",
+
+                                }},
+                            }},
+                            shaderPath = "World/_COMMON/MatShader/MultiTexture_1Layer.msh",
+                        }},
+                    }},
+                }},
+            }},
+        }},
+    }}
+}}
+''')
+    actCoverGenericKids.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Actors/" + mapName + "_Cover_Generic_Kids.act")
+
     actCoverOnline = open(menuartActorsFolder + mapName + "_Cover_Online.act", "w", encoding="utf-8")
     actCoverOnline.write(f'''params =
 {{
@@ -2150,6 +2294,22 @@ ${MapName}$_Coach_4.act
     actMapBkg.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Actors/" + mapName + "_map_bkg.act")
 
+    # atlBannerBkg
+
+    tfiBannerBkg = open(menuartTexturesFolder + mapName + "_banner_bkg.tga.tfi", "w", encoding="utf-8")
+    tfiBannerBkg.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>''')
+    tfiBannerBkg.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_banner_bkg.tga.tfi")
+
     ignoreCoach = open(menuartTexturesFolder + mapName + "_Coach.ignore", "w", encoding="utf-8")
     ignoreCoach.write('''${if eq(NumberCoach, 1):
 ${MapName}$_Coach_2.atl
@@ -2192,6 +2352,372 @@ ${MapName}$_Coach_4_Phone.png.tfi
     ignoreCoach.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach.ignore")
 
+    atlCoachesContent = f'''ITF_GFX_UV_ATLAS =
+{{
+	TextureHeight=1024,
+	TextureAspectRatio=1,
+    {{
+        index=0,
+        uvNumber=4,
+        uv0=vector2dNew(0,0),
+        uv1=vector2dNew(1,0),
+        uv2=vector2dNew(1,1),
+        uv3=vector2dNew(0,1),
+    }},
+}}
+'''
+
+    tfiCoachesContent = f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="X360" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="WII" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>'''
+
+    tfiCoachesPhoneContent = f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="X360" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="WII" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PC" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="NX" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="NONE" />
+</root>'''
+
+    atlCoach1 = open(menuartTexturesFolder + mapName + "_Coach_1.atl", "w", encoding="utf-8")
+    atlCoach1.write(atlCoachesContent)
+    atlCoach1.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_1.atl")
+
+    tfiCoach1 = open(menuartTexturesFolder + mapName + "_Coach_1.tga.tfi", "w", encoding="utf-8")
+    tfiCoach1.write(tfiCoachesContent)
+    tfiCoach1.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_1.tga.tfi")
+
+    tfiCoachPhone1 = open(menuartTexturesFolder + mapName + "_Coach_1_Phone.png.tfi", "w", encoding="utf-8")
+    tfiCoachPhone1.write(tfiCoachesPhoneContent)
+    tfiCoachPhone1.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_1_Phone.png.tfi")
+
+    if coachNumber > 1:
+        atlCoach2 = open(menuartTexturesFolder + mapName + "_Coach_2.atl", "w", encoding="utf-8")
+        atlCoach2.write(atlCoachesContent)
+        atlCoach2.close()
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_2.atl")
+
+        tfiCoach2 = open(menuartTexturesFolder + mapName + "_Coach_2.tga.tfi", "w", encoding="utf-8")
+        tfiCoach2.write(tfiCoachesContent)
+        tfiCoach2.close()
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_2.tga.tfi")
+
+        tfiCoachPhone2 = open(menuartTexturesFolder + mapName + "_Coach_2_Phone.png.tfi", "w", encoding="utf-8")
+        tfiCoachPhone2.write(tfiCoachesPhoneContent)
+        tfiCoachPhone2.close()
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_2_Phone.png.tfi")
+
+    if coachNumber > 2:
+        atlCoach3 = open(menuartTexturesFolder + mapName + "_Coach_3.atl", "w", encoding="utf-8")
+        atlCoach3.write(atlCoachesContent)
+        atlCoach3.close()
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_3.atl")
+
+        tfiCoach3 = open(menuartTexturesFolder + mapName + "_Coach_3.tga.tfi", "w", encoding="utf-8")
+        tfiCoach3.write(tfiCoachesContent)
+        tfiCoach3.close()
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_3.tga.tfi")
+
+        tfiCoachPhone3 = open(menuartTexturesFolder + mapName + "_Coach_3_Phone.png.tfi", "w", encoding="utf-8")
+        tfiCoachPhone3.write(tfiCoachesPhoneContent)
+        tfiCoachPhone3.close()
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_3_Phone.png.tfi")
+
+    if coachNumber > 3:
+        atlCoach4 = open(menuartTexturesFolder + mapName + "_Coach_4.atl", "w", encoding="utf-8")
+        atlCoach4.write(atlCoachesContent)
+        atlCoach4.close()
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_4.atl")
+
+        tfiCoach4 = open(menuartTexturesFolder + mapName + "_Coach_4.tga.tfi", "w", encoding="utf-8")
+        tfiCoach4.write(tfiCoachesContent)
+        tfiCoach4.close()
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_4.tga.tfi")
+
+        tfiCoachPhone4 = open(menuartTexturesFolder + mapName + "_Coach_4_Phone.png.tfi", "w", encoding="utf-8")
+        tfiCoachPhone4.write(tfiCoachesPhoneContent)
+        tfiCoachPhone4.close()
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_4_Phone.png.tfi")
+
+    tfiCover = open(menuartTexturesFolder + mapName + "_Cover.jpg.tfi", "w", encoding="utf-8")
+    tfiCover.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="X360" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="WII" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PC" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="NX" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="NONE" />
+</root>''')
+    tfiCover.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover.jpg.tfi")
+
+    tfiCover2x = open(menuartTexturesFolder + mapName + "_Cover_2x.jpg.tfi", "w", encoding="utf-8")
+    tfiCover2x.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="X360" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="WII" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PC" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="NX" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="NONE" />
+</root>''')
+    tfiCover2x.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_2x.jpg.tfi")
+
+    tfiCover1024 = open(menuartTexturesFolder + mapName + "_Cover_1024.tga.tfi", "w", encoding="utf-8")
+    tfiCover1024.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>''')
+    tfiCover1024.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_1024.tga.tfi")
+
+    atlAlbumBkg = open(menuartTexturesFolder + mapName + "_Cover_AlbumBkg.atl", "w", encoding="utf-8")
+    atlAlbumBkg.write(f'''ITF_GFX_UV_ATLAS =
+{{
+	TextureHeight=1024,
+	TextureAspectRatio=1,
+    {{
+        index=0,
+        uvNumber=4,
+        uv0=vector2dNew(0,0),
+        uv1=vector2dNew(1,0),
+        uv2=vector2dNew(1,1),
+        uv3=vector2dNew(0,1),
+    }},
+}}
+''')
+    atlAlbumBkg.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_AlbumBkg.atl")
+
+    tfiAlbumBkg = open(menuartTexturesFolder + mapName + "_Cover_AlbumBkg.tga.tfi", "w", encoding="utf-8")
+    tfiAlbumBkg.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="X360" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="WII" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>''')
+    tfiAlbumBkg.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_AlbumBkg.tga.tfi")
+
+    atlCoverAlbumCoach = open(menuartTexturesFolder + mapName + "_Cover_AlbumCoach.atl", "w", encoding="utf-8")
+    atlCoverAlbumCoach.write(f'''ITF_GFX_UV_ATLAS =
+{{
+	TextureHeight=1024,
+	TextureAspectRatio=1,
+    {{
+        index=0,
+        uvNumber=4,
+        uv0=vector2dNew(0,0),
+        uv1=vector2dNew(1,0),
+        uv2=vector2dNew(1,1),
+        uv3=vector2dNew(0,1),
+    }},
+}}
+''')
+    atlCoverAlbumCoach.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_AlbumCoach.atl")
+
+    tfiCoverAlbumCoach = open(menuartTexturesFolder + mapName + "_Cover_AlbumCoach.tga.tfi", "w", encoding="utf-8")
+    tfiCoverAlbumCoach.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="X360" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="WII" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>''')
+    tfiCoverAlbumCoach.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_AlbumCoach.tga.tfi")
+
+    atlCoverGeneric = open(menuartTexturesFolder + mapName + "_Cover_Generic.atl", "w", encoding="utf-8")
+    atlCoverGeneric.write(f'''ITF_GFX_UV_ATLAS =
+{{
+	TextureHeight=1024,
+	TextureAspectRatio=1,
+    {{
+        index=0,
+        uvNumber=4,
+        uv0=vector2dNew(0,0),
+        uv1=vector2dNew(1,0),
+        uv2=vector2dNew(1,1),
+        uv3=vector2dNew(0,1),
+    }},
+}}
+''')
+    atlCoverGeneric.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Generic.atl")
+
+    tfiCoverGeneric = open(menuartTexturesFolder + mapName + "_Cover_Generic.tga.tfi", "w", encoding="utf-8")
+    tfiCoverGeneric.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="X360" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="WII" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>''')
+    tfiCoverGeneric.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Generic.tga.tfi")
+
+    # atlCoverGenericKids
+
+    # tfiCoverGenericKids
+
+    atlCoverOnline = open(menuartTexturesFolder + mapName + "_Cover_Online.atl", "w", encoding="utf-8")
+    atlCoverOnline.write(f'''ITF_GFX_UV_ATLAS =
+{{
+	TextureHeight=256,
+	TextureAspectRatio=1,
+    {{
+        index=0,
+        uvNumber=4,
+        uv0=vector2dNew(0,0),
+        uv1=vector2dNew(1,0),
+        uv2=vector2dNew(1,1),
+        uv3=vector2dNew(0,1),
+    }},
+}}
+''')
+    atlCoverOnline.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Online.atl")
+
+    tfiCoverOnline = open(menuartTexturesFolder + mapName + "_Cover_Online.tga.tfi", "w", encoding="utf-8")
+    tfiCoverOnline.write(f'''<root>
+  <TextureConfiguration TargetName="X360" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="WII" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>''')
+    tfiCoverOnline.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Online.tga.tfi")
+
+    atlCoverOnlineKids = open(menuartTexturesFolder + mapName + "_Cover_Online_Kids.atl", "w", encoding="utf-8")
+    atlCoverOnlineKids.write(f'''ITF_GFX_UV_ATLAS =
+{{
+	TextureHeight=256,
+	TextureAspectRatio=1,
+    {{
+        index=0,
+        uvNumber=4,
+        uv0=vector2dNew(0,0),
+        uv1=vector2dNew(1,0),
+        uv2=vector2dNew(1,1),
+        uv3=vector2dNew(0,1),
+    }},
+}}
+''')
+    atlCoverOnlineKids.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Online_Kids.atl")
+
+    tfiCoverOnlineKids = open(menuartTexturesFolder + mapName + "_Cover_Online_Kids.tga.tfi", "w", encoding="utf-8")
+    tfiCoverOnlineKids.write(f'''<root>
+  <TextureConfiguration TargetName="X360" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="WII" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>''')
+    tfiCoverOnlineKids.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Online_Kids.tga.tfi")
+
+    tfiCoverPhone = open(menuartTexturesFolder + mapName + "_Cover_Phone.jpg.tfi", "w", encoding="utf-8")
+    tfiCoverPhone.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="X360" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="WII" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PC" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="NX" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="NONE" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="NONE" />
+</root>''')
+    tfiCoverPhone.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Phone.jpg.tfi")
+
+    # atlMapBkg
+
+    tfiMapBkg = open(menuartTexturesFolder + mapName + "_map_bkg.tga.tfi", "w", encoding="utf-8")
+    tfiMapBkg.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>''')
+    tfiMapBkg.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_map_bkg.tga.tfi")
+
     #Timeline files
     btape = open(timelineFolder + mapName + ".btape", "w", encoding="utf-8")
     btape.write(f'''params =
@@ -2209,6 +2735,11 @@ ${MapName}$_Coach_4_Phone.png.tfi
 ''')
     btape.close()
     print("\033[32mDONE\033[0m", mapName + "/Timeline/" + mapName + ".btape")
+
+    lyrics = open(timelineFolder + mapName + "_Lyrics.txt", "w", encoding="utf-8")
+    lyrics.write("")
+    lyrics.close()
+    print("\033[32mDONE\033[0m", mapName + "/Timeline/" + mapName + "_Lyrics.txt")
 
     iscTml = open(timelineFolder + mapName + "_TML.isc", "w", encoding="utf-8")
     iscTml.write(f'''<?xml version="1.0" encoding="iso-8859-1"?>
@@ -2531,6 +3062,20 @@ ${MapName}$_Coach_4_Phone.png.tfi
 ''')
     actVideoPlayerMapPreview.close()
     print("\033[32mDONE\033[0m", mapName + "/VideosCoach/" + "video_player_map_preview.act")
+
+    #TEMPLATE.txt files
+    shutil.copyfile("assets/TEMPLATE.txt", rawDataMenuArt + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", durangoMovesFolder + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", orbisMovesFolder + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", ps3MovesFolder + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", wiiMovesFolder + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", wiiuMovesFolder + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", x360MovesFolder + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", timelinePictosFolder + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", rawDataPictos + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", timelineRecordingFolder + "TEMPLATE.txt")
+    shutil.copyfile("assets/TEMPLATE.txt", timelineSnippingFolder + "TEMPLATE.txt")
+    print("\033[32mDONE\033[0m", "Copied all TEMPLATE.txt files...")
 
 except Exception as e:
     print(f"\033[31mERROR:\033[0m {e}")
