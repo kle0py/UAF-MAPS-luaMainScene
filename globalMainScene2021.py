@@ -2,7 +2,7 @@
 print("Welcome to the UbiArt Framework \033[34mlua MainScene\033[0m \033[1mmaker\033[0m!")
 print("(It was made specifically for the \033[1mJD2021_TU1\033[0m build that has been publicly shared)")
 print("This is a tool made by \033[4mKleopy\033[0m")
-print("Code version: 5\n")
+print("Code version: 6\n")
 
 import os, shutil
 
@@ -288,7 +288,14 @@ params =
 
     # Autodance files
     adrecording = open(autodanceFolder + mapName + ".adrecording", "w", encoding="utf-8")
-    adrecording.write(f'''autodance_recording_structure = {{ }}''')
+    adrecording.write(f'''autodance_recording_structure = 
+{{
+    JD_AutodanceRecordingStructure = 
+    {{
+        records = {{  }}, 
+        GameMode = 1
+    }}
+}}''')
     adrecording.close()
     print("\033[32mDONE\033[0m", mapName + "/Autodance/" + mapName + ".adrecording")
 
@@ -298,6 +305,41 @@ params =
     NAME = "Tape",
     Tape = 
     {{
+        Tracks =
+        {{
+            {{
+                NAME = "MusicLoopTrack",
+                MusicLoopTrack = 
+                {{
+                    Id = 669036043,
+                    Name = "Replay Music",
+                }},
+            }},
+            {{
+                NAME = "RecordClipTrack",
+                RecordClipTrack = 
+                {{
+                    Id = 16310479,
+                    Name = "Record",
+                }},
+            }},
+            {{
+                NAME = "UsedRecordingClipTrack",
+                UsedRecordingClipTrack = 
+                {{
+                    Id = 2821542699,
+                    Name = "Used Recordings",
+                }},
+            }},
+            {{
+                NAME = "ReplayClipTrack",
+                ReplayClipTrack = 
+                {{
+                    Id = 3198637222,
+                    Name = "Replay",
+                }},
+            }},
+        }},
         TapeClock = 2, -- TapeClock_Engine
         TapeBarCount = 1,
         FreeResourcesAfterPlay = 0,
@@ -310,7 +352,572 @@ params =
     print("\033[32mDONE\033[0m", mapName + "/Autodance/" + mapName + ".adtape")
 
     advideo = open(autodanceFolder + mapName + ".advideo", "w", encoding="utf-8")
-    advideo.write(f'''autodance_video_structure = {{ }}''')
+    advideo.write(f'''autodance_video_structure = 
+{{
+    JD_AutodanceVideoStructure = 
+    {{
+        GameMode = 1, 
+        PropIdCounter = 0, 
+        PropConfigIdCounter = 0, 
+        SongStartPosition = 0.000000, 
+        Duration = 32.000000, 
+        FramePath = "invalid path", 
+        FadeOutDuration = 3.000000, 
+        AnimatedFramePath = "invalid path", 
+        GroundPlanePath = "invalid path", 
+        FirstLayerTripleBackgroundPath = "invalid path", 
+        SecondLayerTripleBackgroundPath = "invalid path", 
+        ThirdLayerTripleBackgroundPath = "invalid path", 
+        ThumbnailTime = 0.000000, 
+        background_effect = 
+        {{
+            AutoDanceFxDesc = 
+            {{
+                HalftoneFactor = 0.000000, 
+                HalftoneCutoutLevels = 256.000000, 
+                SobColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                Opacity = 1.000000, 
+                LowToMid = 0.333000, 
+                LowToMidWidth = 0.150000, 
+                MidToHigh = 0.666000, 
+                MidToHighWidth = 0.150000, 
+                ColorLow = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColorMid = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColorHigh = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                UVBlackoutFactor = 0.000000, 
+                UVBlackoutDesaturation = 0.200000, 
+                UVBlackoutContrast = 4.000000, 
+                UVBlackoutBrightness = 0.000000, 
+                UVBlackoutColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.549020, 
+                        y = 0.549020, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                RefractionFactor = 0.000000, 
+                RefractionOpacity = 0.200000, 
+                RefractionTint = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 1.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                RefractionScale = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.030000, 
+                        y = 0.030000, 
+                        z = 0.030000, 
+                        w = 0.030000
+                    }}
+                }}, 
+                SaturationModifier = 0.000000, 
+                ColoredShivaColor0 = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 1.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColoredShivaColor1 = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 1.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColoredShivaColor2 = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 1.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColoredShivaThresholds = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.100000, 
+                        y = 0.300000, 
+                        z = 0.600000, 
+                        w = 0.950000
+                    }}
+                }}, 
+                OverlayBlendColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.721569, 
+                        y = 0.639216, 
+                        z = 0.756863, 
+                        w = 1.000000
+                    }}
+                }}, 
+                OverlayBlendFactor = 0.000000, 
+                BackgroundSobelColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                BackgroundSobelFactor = 0.000000, 
+                ToonFactor = 0.000000, 
+                TintMulColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                TintMulColorFactor = 0.000000, 
+                ScreenBlendInverseAlphaFactor = 0.000000, 
+                ScreenBlendInverseAlphaScaleX = 0.000000, 
+                ScreenBlendInverseAlphaScaleY = 0.000000, 
+                ScreenBlendInverseAlphaTransX = 0.000000, 
+                ScreenBlendInverseAlphaTransY = 0.000000, 
+                FloorPlaneFactor = 0.000000, 
+                FloorPlaneTiles = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 8.000000, 
+                        y = 8.000000, 
+                        z = 0.000000, 
+                        w = 0.000000
+                    }}
+                }}, 
+                FloorSpeedX = 0.000000, 
+                FloorSpeedY = 0.000000, 
+                FloorWaveSpeed = 0.000000, 
+                FloorBlendMode = 0, 
+                TripleLayerBackgroundFactor = 0.000000, 
+                TripleLayerBackgroundTintColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 0.000000
+                    }}
+                }}, 
+                TripleLayerBackgroundSpeedX = 0.000000, 
+                TripleLayerBackgroundSpeedY = 0.000000
+            }}
+        }}, 
+        player_effect = 
+        {{
+            AutoDanceFxDesc = 
+            {{
+                HalftoneFactor = 0.000000, 
+                HalftoneCutoutLevels = 256.000000, 
+                SobColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                Opacity = 1.000000, 
+                LowToMid = 0.333000, 
+                LowToMidWidth = 0.150000, 
+                MidToHigh = 0.666000, 
+                MidToHighWidth = 0.150000, 
+                ColorLow = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColorMid = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColorHigh = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                UVBlackoutFactor = 0.000000, 
+                UVBlackoutDesaturation = 0.200000, 
+                UVBlackoutContrast = 4.000000, 
+                UVBlackoutBrightness = 0.000000, 
+                UVBlackoutColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.549020, 
+                        y = 0.549020, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                RefractionFactor = 0.000000, 
+                RefractionOpacity = 0.200000, 
+                RefractionTint = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 1.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                RefractionScale = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.030000, 
+                        y = 0.030000, 
+                        z = 0.030000, 
+                        w = 0.030000
+                    }}
+                }}, 
+                SaturationModifier = 0.000000, 
+                ColoredShivaColor0 = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 1.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColoredShivaColor1 = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 1.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColoredShivaColor2 = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 1.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                ColoredShivaThresholds = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.100000, 
+                        y = 0.300000, 
+                        z = 0.600000, 
+                        w = 0.950000
+                    }}
+                }}, 
+                OverlayBlendColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.721569, 
+                        y = 0.639216, 
+                        z = 0.756863, 
+                        w = 1.000000
+                    }}
+                }}, 
+                OverlayBlendFactor = 0.000000, 
+                BackgroundSobelColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                BackgroundSobelFactor = 0.000000, 
+                ToonFactor = 0.000000, 
+                TintMulColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                TintMulColorFactor = 0.000000, 
+                ScreenBlendInverseAlphaFactor = 0.000000, 
+                ScreenBlendInverseAlphaScaleX = 0.000000, 
+                ScreenBlendInverseAlphaScaleY = 0.000000, 
+                ScreenBlendInverseAlphaTransX = 0.000000, 
+                ScreenBlendInverseAlphaTransY = 0.000000, 
+                FloorPlaneFactor = 0.000000, 
+                FloorPlaneTiles = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 8.000000, 
+                        y = 8.000000, 
+                        z = 0.000000, 
+                        w = 0.000000
+                    }}
+                }}, 
+                FloorSpeedX = 0.000000, 
+                FloorSpeedY = 0.000000, 
+                FloorWaveSpeed = 0.000000, 
+                FloorBlendMode = 0, 
+                TripleLayerBackgroundFactor = 0.000000, 
+                TripleLayerBackgroundTintColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 0.000000, 
+                        z = 0.000000, 
+                        w = 0.000000
+                    }}
+                }}, 
+                TripleLayerBackgroundSpeedX = 0.000000, 
+                TripleLayerBackgroundSpeedY = 0.000000, 
+                ThickMiddle = 0.400000, 
+                ThickInner = 0.100000, 
+                ThickSmooth = 0.100000, 
+                OutColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 1.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 0.000000
+                    }}
+                }}, 
+                ShvNbFrames = 0, 
+                PartsScale = 
+                {{
+                    
+                    {{
+                        VAL = 1.000000
+                    }}, 
+                    
+                    {{
+                        VAL = 1.000000
+                    }}, 
+                    
+                    {{
+                        VAL = 1.000000
+                    }}, 
+                    
+                    {{
+                        VAL = 1.000000
+                    }}, 
+                    
+                    {{
+                        VAL = 1.000000
+                    }}
+                }}, 
+                SlimeFactor = 0.000000, 
+                SlimeAmbient = 0.200000, 
+                SlimeNormalTiling = 7.000000, 
+                SlimeLightAngle = 0.000000, 
+                SlimeRefraction = 0.100000, 
+                SlimeRefractionIndex = 1.100000, 
+                SlimeSpecular = 1.100000, 
+                SlimeSpecularPower = 2.000000, 
+                SlimeColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.894118, 
+                        y = 0.294118, 
+                        z = 1.000000, 
+                        w = 0.549020
+                    }}
+                }}, 
+                ToonCutoutLevels = 256.000000, 
+                PlayerGlowFactor = 0.000000, 
+                PlayerGlowColor = 
+                {{
+                    GFX_Vector4 = 
+                    {{
+                        x = 0.000000, 
+                        y = 1.000000, 
+                        z = 1.000000, 
+                        w = 1.000000
+                    }}
+                }}, 
+                SwapHeadWithPlayer = 
+                {{
+                    
+                    {{
+                        VAL = 0
+                    }}, 
+                    
+                    {{
+                        VAL = 1
+                    }}, 
+                    
+                    {{
+                        VAL = 2
+                    }}, 
+                    
+                    {{
+                        VAL = 3
+                    }}, 
+                    
+                    {{
+                        VAL = 4
+                    }}, 
+                    
+                    {{
+                        VAL = 5
+                    }}
+                }}, 
+                AnimatePlayerHead = 
+                {{
+                    
+                    {{
+                        VAL = 0
+                    }}, 
+                    
+                    {{
+                        VAL = 0
+                    }}, 
+                    
+                    {{
+                        VAL = 0
+                    }}, 
+                    
+                    {{
+                        VAL = 0
+                    }}, 
+                    
+                    {{
+                        VAL = 0
+                    }}, 
+                    
+                    {{
+                        VAL = 0
+                    }}
+                }}, 
+                StartRadius = 0.000000, 
+                EndRadius = 2.000000, 
+                RadiusVariance = 0.000000, 
+                RadiusNoiseRate = 0.000000, 
+                RadiusNoiseAmp = 0.000000, 
+                MinSpin = 0.000000, 
+                MaxSpin = 0.000000, 
+                DirAngle = 0.000000, 
+                MinWanderRate = 0.000000, 
+                MaxWanderRate = 0.000000, 
+                MinWanderAmp = 0.000000, 
+                MaxWanderAmp = 0.000000, 
+                MinSpeed = 2.000000, 
+                MaxSpeed = 4.000000, 
+                MotionPower = 1.000000, 
+                Amount = 0.000000, 
+                ImageID = 0, 
+                StartR = 0.000000, 
+                StartG = 0.000000, 
+                StartB = 0.000000, 
+                EndR = 1.000000, 
+                EndG = 1.000000, 
+                EndB = 1.000000, 
+                StartAlpha = 1.000000, 
+                EndAlpha = 1.000000, 
+                AnimatedHeadTotalTime = 20.000000, 
+                AnimatedHeadRestTime = 16.000000, 
+                AnimatedHeadFrameTime = 0.600000, 
+                AnimatedHeadMaxDistance = 1.250000, 
+                AnimatedHeadMaxAngle = 1.200000, 
+                TexturedOutlineFactor = 0.000000, 
+                TexturedOutlineTiling = 0.000000
+            }}
+        }}
+    }}
+}}''')
     advideo.close()
     print("\033[32mDONE\033[0m", mapName + "/Autodance/" + mapName + ".advideo")
 
@@ -2611,9 +3218,40 @@ ${MapName}$_Coach_4_Phone.png.tfi
     tfiCoverGeneric.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Generic.tga.tfi")
 
-    # atlCoverGenericKids
+    atlCoverGenericKids = open(menuartTexturesFolder + mapName + "_Cover_Generic_Kids.atl", "w", encoding="utf-8")
+    atlCoverGenericKids.write(f'''ITF_GFX_UV_ATLAS =
+{{
+	TextureHeight=1024,
+	TextureAspectRatio=1,
+    {{
+        index=0,
+        uvNumber=4,
+        uv0=vector2dNew(0,0),
+        uv1=vector2dNew(1,0),
+        uv2=vector2dNew(1,1),
+        uv3=vector2dNew(0,1),
+    }},
+}}
+''')
+    atlCoverGenericKids.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Generic_Kids.atl")
 
-    # tfiCoverGenericKids
+    tfiCoverGenericKids = open(menuartTexturesFolder + mapName + "_Cover_Generic_Kids.tga.tfi", "w", encoding="utf-8")
+    tfiCoverGenericKids.write(f'''<root>
+  <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="ORBIS" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="X360" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PS3" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="CAFE" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="WII" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PC" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="NX" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="GGP" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="PROSPERO" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+  <TextureConfiguration TargetName="SCARLETT" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
+</root>''')
+    tfiCoverGenericKids.close()
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Generic_Kids.tga.tfi")
 
     atlCoverOnline = open(menuartTexturesFolder + mapName + "_Cover_Online.atl", "w", encoding="utf-8")
     atlCoverOnline.write(f'''ITF_GFX_UV_ATLAS =
