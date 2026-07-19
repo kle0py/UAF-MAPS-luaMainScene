@@ -2903,6 +2903,9 @@ ${MapName}$_Coach_4.act
 
     # atlBannerBkg
 
+    shutil.copyfile("assets/banner_bkg.tga", menuartTexturesFolder + mapName + "_banner_bkg.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_banner_bkg.tga")
+
     tfiBannerBkg = open(menuartTexturesFolder + mapName + "_banner_bkg.tga.tfi", "w", encoding="utf-8")
     tfiBannerBkg.write(f'''<root>
   <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
@@ -3002,6 +3005,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
   <TextureConfiguration TargetName="SCARLETT" CompressionMode="NONE" />
 </root>'''
 
+    shutil.copyfile("assets/Coach.tga", menuartTexturesFolder + mapName + "_Coach_1.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_1.tga")
+
     atlCoach1 = open(menuartTexturesFolder + mapName + "_Coach_1.atl", "w", encoding="utf-8")
     atlCoach1.write(atlCoachesContent)
     atlCoach1.close()
@@ -3018,6 +3024,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_1_Phone.png.tfi")
 
     if coachNumber > 1:
+        shutil.copyfile("assets/Coach.tga", menuartTexturesFolder + mapName + "_Coach_2.tga")
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_2.tga")
+
         atlCoach2 = open(menuartTexturesFolder + mapName + "_Coach_2.atl", "w", encoding="utf-8")
         atlCoach2.write(atlCoachesContent)
         atlCoach2.close()
@@ -3034,6 +3043,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
         print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_2_Phone.png.tfi")
 
     if coachNumber > 2:
+        shutil.copyfile("assets/Coach.tga", menuartTexturesFolder + mapName + "_Coach_3.tga")
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_3.tga")
+
         atlCoach3 = open(menuartTexturesFolder + mapName + "_Coach_3.atl", "w", encoding="utf-8")
         atlCoach3.write(atlCoachesContent)
         atlCoach3.close()
@@ -3050,6 +3062,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
         print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_3_Phone.png.tfi")
 
     if coachNumber > 3:
+        shutil.copyfile("assets/Coach.tga", menuartTexturesFolder + mapName + "_Coach_4.tga")
+        print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Coach_4.tga")
+
         atlCoach4 = open(menuartTexturesFolder + mapName + "_Coach_4.atl", "w", encoding="utf-8")
         atlCoach4.write(atlCoachesContent)
         atlCoach4.close()
@@ -3099,6 +3114,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
     tfiCover2x.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_2x.jpg.tfi")
 
+    shutil.copyfile("assets/Cover_1024.tga", menuartTexturesFolder + mapName + "_Cover_1024.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_1024.tga")
+
     tfiCover1024 = open(menuartTexturesFolder + mapName + "_Cover_1024.tga.tfi", "w", encoding="utf-8")
     tfiCover1024.write(f'''<root>
   <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT1" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
@@ -3130,6 +3148,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
 ''')
     atlAlbumBkg.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_AlbumBkg.atl")
+
+    shutil.copyfile("assets/Cover_AlbumBkg.tga", menuartTexturesFolder + mapName + "_Cover_AlbumBkg.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_AlbumBkg.tga")
 
     tfiAlbumBkg = open(menuartTexturesFolder + mapName + "_Cover_AlbumBkg.tga.tfi", "w", encoding="utf-8")
     tfiAlbumBkg.write(f'''<root>
@@ -3166,6 +3187,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
     atlCoverAlbumCoach.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_AlbumCoach.atl")
 
+    shutil.copyfile("assets/Cover_AlbumCoach.tga", menuartTexturesFolder + mapName + "_Cover_AlbumCoach.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_AlbumCoach.tga")
+
     tfiCoverAlbumCoach = open(menuartTexturesFolder + mapName + "_Cover_AlbumCoach.tga.tfi", "w", encoding="utf-8")
     tfiCoverAlbumCoach.write(f'''<root>
   <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT5" MipmapLevelStart="0" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
@@ -3200,6 +3224,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
 ''')
     atlCoverGeneric.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Generic.atl")
+
+    shutil.copyfile("assets/Cover.tga", menuartTexturesFolder + mapName + "_Cover_Generic.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Generic.tga")
 
     tfiCoverGeneric = open(menuartTexturesFolder + mapName + "_Cover_Generic.tga.tfi", "w", encoding="utf-8")
     tfiCoverGeneric.write(f'''<root>
@@ -3236,6 +3263,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
     atlCoverGenericKids.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Generic_Kids.atl")
 
+    shutil.copyfile("assets/Cover_Kids.tga", menuartTexturesFolder + mapName + "_Cover_Generic_Kids.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Generic_Kids.tga")
+
     tfiCoverGenericKids = open(menuartTexturesFolder + mapName + "_Cover_Generic_Kids.tga.tfi", "w", encoding="utf-8")
     tfiCoverGenericKids.write(f'''<root>
   <TextureConfiguration TargetName="DURANGO" CompressionMode="DXT5" MipmapLevelStart="1" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
@@ -3270,6 +3300,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
 ''')
     atlCoverOnline.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Online.atl")
+
+    shutil.copyfile("assets/Cover.tga", menuartTexturesFolder + mapName + "_Cover_Online.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Online.tga")
 
     tfiCoverOnline = open(menuartTexturesFolder + mapName + "_Cover_Online.tga.tfi", "w", encoding="utf-8")
     tfiCoverOnline.write(f'''<root>
@@ -3306,6 +3339,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
     atlCoverOnlineKids.close()
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Online_Kids.atl")
 
+    shutil.copyfile("assets/Cover_Kids.tga", menuartTexturesFolder + mapName + "_Cover_Online_Kids.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Online_Kids.tga")
+
     tfiCoverOnlineKids = open(menuartTexturesFolder + mapName + "_Cover_Online_Kids.tga.tfi", "w", encoding="utf-8")
     tfiCoverOnlineKids.write(f'''<root>
   <TextureConfiguration TargetName="X360" CompressionMode="DXT5" MipmapLevelStart="2" UseMipmap="False" WrapModeX="WrapMode_Repeat" WrapModeY="WrapMode_Repeat" Filter="MipmapFilter_Box" AllowDegradation="False" LodBias="0" AllowDegradationAlpha="False" OneColMode="auto" Anisotropy="max" />
@@ -3341,6 +3377,9 @@ ${MapName}$_Coach_4_Phone.png.tfi
     print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_Cover_Phone.jpg.tfi")
 
     # atlMapBkg
+
+    shutil.copyfile("assets/map_bkg.tga", menuartTexturesFolder + mapName + "_map_bkg.tga")
+    print("\033[32mDONE\033[0m", mapName + "/MenuArt/Textures/" + mapName + "_map_bkg.tga")
 
     tfiMapBkg = open(menuartTexturesFolder + mapName + "_map_bkg.tga.tfi", "w", encoding="utf-8")
     tfiMapBkg.write(f'''<root>
